@@ -19,7 +19,6 @@ where started_at <> 'started_at'
 
 Select 
 * 
-from 
-CTE
+from CTE
 
 
