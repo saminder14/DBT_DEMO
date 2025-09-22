@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 WITH DAILY_WEATHER AS (
 
 select
@@ -33,5 +39,4 @@ QUALIFY ROW_NUMBER() OVER (PARTITION BY DAILY_WEATHER ORDER BY COUNT(WEATHER) DE
 )
 
 select
-*
-from DAILY_WEATHER_AGG
+* from DAILY_WEATHER_AGG 
