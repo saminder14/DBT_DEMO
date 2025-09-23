@@ -17,7 +17,7 @@ TO_TIMESTAMP(STARTED_AT) AS STARTED_AT
 , {{get_season ('STARTED_AT') }} AS STATION_OF_YEAR
 
 
-from {{ source('demo', 'bike') }}
+from {{ ref('stg_bike') }}
 
 where started_at <> 'started_at'
 
